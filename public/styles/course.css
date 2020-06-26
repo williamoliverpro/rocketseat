@@ -1,0 +1,83 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+:root {
+    --color-green: rgb(4, 211, 97);
+    --color-rocket: rgb(29, 29, 36);
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(17, 17, 22);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+header {
+    padding: 30px;
+    text-align: center;
+}
+.link {
+    margin: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(221, 221, 221);
+}
+
+.link:hover {
+    color: var(--color-purple);
+    transition: color 400ms;
+}
+
+/* === CARD === */
+
+.course {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.card {
+    background-color: var(--color-rocket);
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+}
+
+.card__course-container {
+    position: relative;
+    padding-top: 62.5%;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+}
+
+.card__content, .card__info {
+    padding: 24px;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.card__price {
+    background: var(--color-rocket);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.external_link {
+    color: white;
+    right: 8px;
+    top: 8px;
+}

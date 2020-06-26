@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>About</title>
+    <link rel="stylesheet" href="/styles/about.css">
+
+{% endblock head %}
+
+{% block content %}
+
+    <main>
+        <div>
+            <img src="/assets/logorocketseat.jpg" alt="logo">
+            <h1>{{ about.name }}</h1>
+            <h2>{{ about.description }}</h2>
+            <ul>
+                <li id="techs">Techs:</li>
+                {% for tech in about.techs %}
+                    <li>{{ tech }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div>
+            {% for link in about.links %}
+                <a class="link" href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+            {% endfor %}
+        </div>
+    </footer>
+
+{% endblock content %}

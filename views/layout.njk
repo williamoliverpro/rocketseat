@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon"/>
+
+        {% block head %}
+
+            <title>Home</title>
+            <link rel="stylesheet" href="/styles/home.css">
+
+        {% endblock head %}
+
+    </head>
+    <body>
+        <header>
+            <div>
+                <a class="link" href="/">Home</a>
+                <a class="link" href="/about">About</a>
+                <a class="link" href="/courses">Contents</a>
+                <a class="link" href="https://discordapp.com/invite/gCRAFhc" target="_blank">Community</a>
+                <a class="link" href="mailto:oi@rocketseat.com.br">Email</a>
+                <a class="link" href="tel:+5547992078767">Telephone</a>
+            </div>
+        </header>
+
+        {% block content %}{% endblock content %}
+        
+    </body>
+</html>

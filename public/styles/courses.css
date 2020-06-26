@@ -1,0 +1,123 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+:root {
+    --color-green: rgb(4, 211, 97);
+    --color-rocket: rgb(29, 29, 36);
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(17, 17, 22);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+header {
+    padding: 30px;
+    text-align: center;
+}
+.link {
+    margin: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(221, 221, 221);
+}
+
+.link:hover {
+    color: var(--color-purple);
+    transition: color 400ms;
+}
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-rocket);
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: grid;
+}
+
+.card__image-container {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.card__content, .card__info {
+    padding: 24px;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.card__price {
+    background: var(--color-rocket);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.modal-overlay {
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .fullscreen {
+    color: black;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.maximize {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
